@@ -8,9 +8,6 @@ const MainPage = () => {
       <div className="page">
         <div className="container">
           <Card />
-          <Card />
-          <Card />
-          <Card />
         </div>
       </div>
     </>
