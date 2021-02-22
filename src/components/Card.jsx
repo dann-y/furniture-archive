@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import "./Card.scss";
 import { Canvas } from "react-three-fiber";
-import { OrbitControls, Plane } from "@react-three/drei";
-import Model from "./Three/Untitled";
+import { OrbitControls, Plane, OrthographicCamera } from "@react-three/drei";
+import Model from "./Three/Wirechair";
 import { BoxBufferGeometry } from "three";
 
 function Box() {
@@ -19,19 +19,23 @@ const Card = () => {
     <>
       <div className="card-container">
         <div className="canvas-container">
-          <Canvas colorManagement shadowMap>
+          <Canvas
+            colorManagement
+            shadowMap
+            camera={{ position: [0, 0, 1.9], far: 40 }}
+          >
+            <OrthographicCamera />
             <OrbitControls
-              autoRotate
-              autoRotateSpeed={4}
-
-              // minPolarAngle={Math.PI / 2.5}
-              // maxPolarAngle={Math.PI / 1.7}
+              // autoRotate
+              // autoRotateSpeed={4}
+              minPolarAngle={Math.PI / 2.5}
+              maxPolarAngle={Math.PI / 2.5}
             />
             <ambientLight intensity={0.4} />
             <directionalLight
               castShadow
               position={[-8, 16, -8]}
-              intensity={0}
+              intensity={1}
               shadow-mapSize-width={1024}
               shadow-mapSize-height={1024}
               shadow-camera-far={50}
@@ -59,8 +63,8 @@ const Card = () => {
           </Canvas>
         </div>
         <div>
-          <h1>Chair</h1>
-          <p>by Marcel Breuer</p>
+          <h1>Wireframe Chair (1951)</h1>
+          <p>Designed by Charles & Ray Eames</p>
         </div>
       </div>
     </>
