@@ -2,9 +2,9 @@ import React, { Suspense } from "react";
 import "./Card.scss";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, Plane, OrthographicCamera } from "@react-three/drei";
-import Model from "../components/Three/Wirechair";
+import Test from "../components/Three/Test";
 
-const Card = () => {
+const Card = ({ url }) => {
   return (
     <>
       <div className="card-container">
@@ -37,7 +37,7 @@ const Card = () => {
             />
             <pointLight castShadow position={[0, 50, 0]} intensity={2} />
             <Suspense castShadow fallback={null}>
-              <Model />
+              <Test scenePath={url} />
             </Suspense>
             {/* <Plane
               receiveShadow
@@ -55,7 +55,7 @@ const Card = () => {
         </div>
         <div>
           <h1>Wireframe Chair (1951)</h1>
-          <h3>Designed by Charles & Ray Eames</h3>
+          <p>Designed by Charles & Ray Eames</p>
         </div>
       </div>
     </>

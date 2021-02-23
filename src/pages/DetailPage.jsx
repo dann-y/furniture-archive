@@ -1,5 +1,6 @@
 import React from "react";
 import "./DetailPage.scss";
+import DetailCanvas from "../components/DetailCanvas";
 
 const DetailPage = () => {
   return (
@@ -7,7 +8,10 @@ const DetailPage = () => {
       <div className="back-button">go back</div>
       <div id="detail-page">
         <div className="container">
-          <div className="canvas-container">hello</div>
+          <div className="canvas-container">
+            {" "}
+            <DetailCanvas url={"/wirechair.gltf"} />
+          </div>
           <div className="item-detail">
             <h1>Wassily Chair</h1>
             <h3>By Marcel Breuer</h3>

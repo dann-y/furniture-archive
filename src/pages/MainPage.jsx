@@ -7,11 +7,8 @@ const MainPage = () => {
     <>
       <div id="main-page">
         <div className="container">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card url={"/wirechair.gltf"} />
+          <Card url={"wirechair.glb"} />
         </div>
       </div>
     </>
