@@ -1,0 +1,30 @@
+#detail-page {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    margin: 0 auto;
+    padding: 10px;
+    align-self: center;
+
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    row-gap: 20px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .canvas-container {
+    width: 500px;
+  }
+
+  .item-detail {
+    width: 500px;
+  }
+}

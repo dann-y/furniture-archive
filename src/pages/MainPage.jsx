@@ -5,8 +5,12 @@ import "./MainPage.scss";
 const MainPage = () => {
   return (
     <>
-      <div className="page">
+      <div id="main-page">
         <div className="container">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
           <Card />
         </div>
       </div>
