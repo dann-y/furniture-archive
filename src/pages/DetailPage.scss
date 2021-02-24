@@ -3,7 +3,7 @@
   justify-content: center;
 
   .container {
-    margin: 0 auto;
+    margin: 3vh auto;
     padding: 10px;
     align-self: center;
 
@@ -13,18 +13,26 @@
     column-gap: 10px;
     row-gap: 20px;
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    @media screen and (max-width: 850px) {
+      column-gap: 0;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
   }
 
   .canvas-container {
     width: 500px;
+    height: 500px;
+
+    @media screen and (max-width: 850px) {
+      margin: auto;
+    }
   }
 
   .item-detail {
-    width: 500px;
+    width: 40vw;
+    @media screen and (max-width: 850px) {
+      width: 90vw;
+    }
   }
 }

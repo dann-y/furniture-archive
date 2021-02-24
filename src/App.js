@@ -17,8 +17,8 @@ const data = [
 function App() {
   return (
     <>
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/">
             <MainPage />
@@ -27,8 +27,8 @@ function App() {
             <DetailPage />
           </Route>
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </>
   );
 }

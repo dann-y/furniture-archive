@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import "./MainPage.scss";
 
@@ -16,9 +17,11 @@ const MainPage = () => {
         </div>
       </div>
       <div className="page-nav">
-        <h1>1</h1>
-        <h1>2</h1>
-        <h1>3</h1>
+        <div>
+          <Link to="first">1</Link>
+          <Link to="first">2</Link>
+          <Link to="first">3</Link>
+        </div>
       </div>
     </>
   );

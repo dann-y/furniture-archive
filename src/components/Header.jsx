@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header() {
@@ -22,12 +23,14 @@ export default function Header() {
     // </div>
 
     <div className="sticky">
-      <div class="nav">
+      <div className="nav">
         <input type="checkbox" id="nav-check"></input>
-        <div class="nav-header">
-          <div class="nav-title">furniture archive</div>
+        <div className="nav-header">
+          <div className="nav-title">
+            <Link to="/">furniture archive</Link>
+          </div>
         </div>
-        <div class="nav-btn">
+        <div className="nav-btn">
           <label for="nav-check">
             <span></span>
             <span></span>
@@ -35,24 +38,12 @@ export default function Header() {
           </label>
         </div>
 
-        <div class="nav-links">
+        <div className="nav-links">
           <a href="//github.io/jo_geek" target="_blank">
-            Github
+            archive
           </a>
           <a href="http://stackoverflow.com/users/4084003/" target="_blank">
-            Stackoverflow
-          </a>
-          <a
-            href="https://in.linkedin.com/in/jonesvinothjoseph"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
-          <a href="https://codepen.io/jo_Geek/" target="_blank">
-            Codepen
-          </a>
-          <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">
-            JsFiddle
+            about
           </a>
         </div>
       </div>
