@@ -3,6 +3,7 @@ import "./Card.scss";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, Plane, OrthographicCamera } from "@react-three/drei";
 import Test from "../components/Three/Test";
+import { Link } from "react-router-dom";
 
 const Card = ({ url }) => {
   return (
@@ -53,10 +54,12 @@ const Card = ({ url }) => {
             </Plane> */}
           </Canvas>
         </div>
-        <div>
-          <h1>Wireframe Chair (1951)</h1>
-          <p>Designed by Charles & Ray Eames</p>
-        </div>
+        <Link to="/detail">
+          <div>
+            <h1>Wireframe Chair (1951)</h1>
+            <p>Designed by Charles & Ray Eames</p>
+          </div>
+        </Link>
       </div>
     </>
   );
