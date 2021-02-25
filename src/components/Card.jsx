@@ -4,8 +4,9 @@ import { Canvas } from "react-three-fiber";
 import { OrbitControls, Plane, OrthographicCamera } from "@react-three/drei";
 import Test from "../components/Three/Test";
 import { Link } from "react-router-dom";
+import { data } from "../data.js";
 
-const Card = ({ url }) => {
+const Card = ({ url, id, name, date, designer }) => {
   return (
     <>
       <div className="card-container">
@@ -54,10 +55,12 @@ const Card = ({ url }) => {
             </Plane> */}
           </Canvas>
         </div>
-        <Link to="/detail">
+        <Link to={`/${id}`}>
           <div>
-            <h1>Wireframe Chair (1951)</h1>
-            <p>Designed by Charles & Ray Eames</p>
+            <h1>
+              {name} ({date})
+            </h1>
+            <p>Designed by {designer}</p>
           </div>
         </Link>
       </div>

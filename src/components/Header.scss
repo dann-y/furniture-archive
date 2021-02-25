@@ -104,7 +104,7 @@ body {
 
 .nav > .nav-links > a {
   display: inline-block;
-  padding: 13px 10px 13px 10px;
+  padding: 13px 30px;
   text-decoration: none;
   color: black;
 }
@@ -144,18 +144,16 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.3);
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
     top: 50px;
     left: 0px;
-    opacity: 0.5;
   }
   .nav > .nav-links > a {
     display: block;
     width: 100%;
-    opacity: 1;
   }
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;

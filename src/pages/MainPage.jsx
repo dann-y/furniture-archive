@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import "./MainPage.scss";
+import { data } from "../data";
 
 const MainPage = () => {
+  const [page, setPage] = useState("1");
+
   return (
     <>
       <div id="main-page">
         <div className="container">
-          <Card url={"/wirechair.gltf"} />
-          {/* <Card url={"wirechair.glb"} />
-          <Card url={"wirechair.glb"} />
-          <Card url={"/wirechair.glb"} />
-          <Card url={"wirechair.glb"} />
-          <Card url={"wirechair.glb"} /> */}
+          {data.map((x) => {
+            return (
+              <Card
+                url={x.url}
+                id={x.id}
+                name={x.name}
+                date={x.date}
+                designer={x.designer}
+              />
+            );
+          })}
         </div>
       </div>
       <div className="page-nav">
