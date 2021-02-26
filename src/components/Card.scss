@@ -5,8 +5,20 @@
   height: 50vh;
   width: 450px;
   text-align: center;
+
+  @media screen and (max-width: 450px) {
+    width: 90vw;
+  }
 }
 
 .canvas-container {
   height: 80%;
+}
+
+.text-container {
+  transition-duration: 0.3s;
+
+  &:hover {
+    color: rgb(150, 150, 150);
+  }
 }

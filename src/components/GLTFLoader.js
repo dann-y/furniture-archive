@@ -7,7 +7,7 @@ import { useFrame } from "react-three-fiber";
  * @param {Array} position - The position on the canvas the model should take
  * @param {Array} rotation - Optional rotation of the model. If provided [x, y, z] values are mapped to the useFrame hook which will rotate the model in the given direction(s)
  */
-const Test = ({ scenePath, position, rotation, ...rest }) => {
+const GLTFLoader = ({ scenePath, position, rotation, ...rest }) => {
   const gltf = useGLTF(scenePath, true);
   const mesh = React.useRef();
   useFrame(() =>
@@ -23,4 +23,4 @@ const Test = ({ scenePath, position, rotation, ...rest }) => {
     </mesh>
   );
 };
-export default Test;
+export default GLTFLoader;

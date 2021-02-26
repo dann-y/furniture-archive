@@ -24,13 +24,13 @@ const MainPage = () => {
           })}
         </div>
       </div>
-      <div className="page-nav">
+      {/* <div className="page-nav">
         <div>
           <Link to="first">1</Link>
           <Link to="first">2</Link>
           <Link to="first">3</Link>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

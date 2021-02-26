@@ -21,13 +21,12 @@
 
     @media screen and (max-width: 900px) {
       column-gap: 0;
-      row-gap: 3vh;
+      row-gap: 5vh;
       grid-template-columns: auto;
       grid-template-rows: auto;
     }
   }
 }
-
 .page-nav {
   display: flex;
   text-align: center;

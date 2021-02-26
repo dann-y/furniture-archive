@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import "./Card.scss";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, Plane, OrthographicCamera } from "@react-three/drei";
-import Test from "../components/Three/Test";
+import GLTFLoader from "../components/GLTFLoader";
 
 const DetailCanvas = ({ url }) => {
   return (
@@ -30,7 +30,7 @@ const DetailCanvas = ({ url }) => {
           />
           <pointLight castShadow position={[0, 50, 0]} intensity={2} />
           <Suspense castShadow fallback={null}>
-            <Test scenePath={url} />
+            <GLTFLoader scenePath={url} />
           </Suspense>
           {/* <Plane
               receiveShadow

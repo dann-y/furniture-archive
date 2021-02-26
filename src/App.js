@@ -1,9 +1,14 @@
 import "./App.css";
 import Header from "./components/Header";
 import MainPage from "./pages/MainPage";
+import AboutPage from "./pages/AboutPage";
 import DetailPage from "./pages/DetailPage";
-import NotFound from "./pages/NotFound";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Footer from "./components/Footer";
 
 function App() {
@@ -14,6 +19,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <MainPage />
+          </Route>
+          <Route exact path="/about">
+            <AboutPage />
           </Route>
           <Route path="/:id">
             <DetailPage id=":id" />

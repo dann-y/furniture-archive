@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import "./Card.scss";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, Plane, OrthographicCamera } from "@react-three/drei";
-import Test from "../components/Three/Test";
+import GLTFLoader from "../components/GLTFLoader";
 import { Link } from "react-router-dom";
 import { data } from "../data.js";
 
@@ -39,7 +39,7 @@ const Card = ({ url, id, name, date, designer }) => {
             />
             <pointLight castShadow position={[0, 50, 0]} intensity={2} />
             <Suspense castShadow fallback={null}>
-              <Test scenePath={url} />
+              <GLTFLoader scenePath={url} />
             </Suspense>
             {/* <Plane
               receiveShadow
@@ -56,7 +56,7 @@ const Card = ({ url, id, name, date, designer }) => {
           </Canvas>
         </div>
         <Link to={`/${id}`}>
-          <div>
+          <div className="text-container">
             <h1>
               {name} ({date})
             </h1>

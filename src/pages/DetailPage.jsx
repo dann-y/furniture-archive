@@ -9,33 +9,39 @@ const DetailPage = () => {
 
   const doesExist = data.some((el) => el.id === id);
 
-  const isItem = (item) => {
-    return item.id === id;
-  };
+  console.log(doesExist);
 
-  const { name, designer, description1, description2, url } = data.find(isItem);
+  if (doesExist === false) {
+    return <div>hi</div>;
+  } else {
+    const isItem = (item) => {
+      return item.id === id;
+    };
 
-  return (
-    <>
-      <div className="back-button">go back</div>
-      <div id="detail-page">
-        <div className="container">
-          <div className="canvas-container">
-            {" "}
-            <DetailCanvas url={url} />
-          </div>
-          <div className="item-detail">
-            <h1>{name}</h1>
-            <h3>By {designer}</h3>
-            <p>
-              {description1}
-              <br /> <br /> {description2}
-            </p>
+    const { name, designer, description1, description2, url } = data.find(
+      isItem
+    );
+    return (
+      <>
+        <div id="detail-page">
+          <div className="container">
+            <div className="canvas-container">
+              {" "}
+              <DetailCanvas url={url} />
+            </div>
+            <div className="item-detail">
+              <h1>{name}</h1>
+              <h3>By {designer}</h3>
+              <p>
+                {description1}
+                <br /> <br /> {description2}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 };
 
 export default DetailPage;

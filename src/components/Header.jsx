@@ -39,12 +39,8 @@ export default function Header() {
         </div>
 
         <div className="nav-links">
-          <a href="//github.io/jo_geek" target="_blank">
-            archive
-          </a>
-          <a href="http://stackoverflow.com/users/4084003/" target="_blank">
-            about
-          </a>
+          <Link to="/">archive</Link>
+          <Link to="/about">about</Link>
         </div>
       </div>
     </div>
