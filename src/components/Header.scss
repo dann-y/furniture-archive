@@ -4,68 +4,6 @@
   z-index: 100; /* this is optional and should be different for every project */
 }
 
-// header {
-//   z-index: 99;
-//   width: 100%;
-//   padding: 30px 60px 20px;
-//   transition: background-color 0.5s ease-in-out;
-
-//   // &:hover {
-//   //   background-color: rgba(255, 255, 255, 0.05);
-//   // }
-//   @media screen and (max-width: 800px) {
-//     display: none;
-//   }
-
-//   .header-inner {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     .logo {
-//       letter-spacing: 1px;
-//       font-size: 1.2rem;
-//     }
-//     nav {
-//       ul {
-//         margin: 0;
-//         padding: 0;
-//         display: flex;
-//         li {
-//           list-style: none;
-//           margin: 0 45px;
-//           &.btn {
-//             a {
-//               font-weight: 600;
-//               background: #23232a;
-//               padding: 16px 24px;
-//               border-radius: 10px;
-//             }
-//           }
-//           p {
-//             text-decoration: none;
-
-//             cursor: pointer;
-//             transition: color 0.5s;
-
-//             &:hover {
-//               color: rgb(95, 95, 95);
-//             }
-//           }
-//           a {
-//             text-decoration: none;
-
-//             transition: color 0.5s;
-
-//             &:hover {
-//               color: rgb(95, 95, 95);
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 * {
   box-sizing: border-box;
 }
@@ -126,6 +64,7 @@ body {
   .nav > .nav-header > .nav-title {
     display: block;
     position: absolute;
+    padding: 0;
   }
 
   .nav > .nav-btn {
@@ -136,14 +75,17 @@ body {
   }
   .nav > .nav-btn > label {
     display: inline-block;
+    position: absolute;
     width: 50px;
     height: 50px;
     padding: 13px;
+    right: 20px;
+    top: 20px;
   }
-  .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+  // .nav > .nav-btn > label:hover,
+  // .nav #nav-check:checked ~ .nav-btn > label {
+  //   background-color: rgba(0, 0, 0, 0.3);
+  // }
   .nav > .nav-btn > label > span {
     display: block;
 
@@ -159,7 +101,7 @@ body {
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
+    top: 80px;
     left: 0px;
   }
   .nav > .nav-links > a {

@@ -14,7 +14,12 @@ const DetailCanvas = ({ url }) => {
           camera={{ position: [0, 0, 1], far: 40 }}
         >
           <OrthographicCamera />
-          <OrbitControls autoRotate autoRotateSpeed={4} />
+          <OrbitControls
+            autoRotate
+            autoRotateSpeed={4}
+            minDistance={0.5}
+            maxDistance={1.5}
+          />
           <ambientLight intensity={0.4} />
           <directionalLight
             castShadow

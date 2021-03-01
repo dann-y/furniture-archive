@@ -1,9 +1,16 @@
 import React from "react";
+import "./AboutPage.scss";
 
 const AboutPage = () => {
   return (
     <>
-      <div>about page my guy</div>
+      <div id="about-page">
+        <div className="container">
+          The furniture archive is a digital installation highlighting prominent
+          works of industrial designers throughout history, with an emphasis on
+          mid-century modern design.
+        </div>
+      </div>
     </>
   );
 };

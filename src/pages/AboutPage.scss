@@ -1,0 +1,12 @@
+#about-page {
+  display: flex;
+  justify-content: center;
+  flex: 1 0 auto;
+  .container {
+    max-width: 700px;
+    flex: 1 0 auto;
+    margin: 3vh auto;
+    padding: 10px;
+    align-self: center;
+  }
+}

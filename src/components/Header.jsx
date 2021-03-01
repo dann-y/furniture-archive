@@ -1,33 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header() {
-  return (
-    // <div className="sticky">
-    //   <header>
-    //     <div className="header-inner">
-    //       <div className="logo">furniture archive</div>
-    //       <nav>
-    //         <ul>
-    //           <li>
-    //             <p>archive</p>
-    //           </li>
-    //           <li>
-    //             <p>about</p>
-    //           </li>
-    //         </ul>
-    //       </nav>
-    //     </div>
-    //   </header>
-    // </div>
+  const [checked, setChecked] = useState(false);
 
+  const collapseNavbar = () => {
+    setChecked(false);
+  };
+  return (
     <div className="sticky">
       <div className="nav">
-        <input type="checkbox" id="nav-check"></input>
+        <input
+          type="checkbox"
+          id="nav-check"
+          checked={checked}
+          onClick={() => setChecked(!checked)}
+        ></input>
         <div className="nav-header">
           <div className="nav-title">
-            <Link to="/">furniture archive</Link>
+            <Link onClick={collapseNavbar} to="/">
+              furniture archive
+            </Link>
           </div>
         </div>
         <div className="nav-btn">
@@ -39,8 +33,12 @@ export default function Header() {
         </div>
 
         <div className="nav-links">
-          <Link to="/">archive</Link>
-          <Link to="/about">about</Link>
+          <Link to="/" onClick={collapseNavbar}>
+            archive
+          </Link>
+          <Link to="/about" onClick={collapseNavbar}>
+            about
+          </Link>
         </div>
       </div>
     </div>
