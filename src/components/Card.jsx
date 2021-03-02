@@ -21,6 +21,7 @@ const Card = ({ url, id, name, date, designer }) => {
               autoRotate
               autoRotateSpeed={4}
               enableZoom={false}
+              enablePan={false}
               minPolarAngle={Math.PI / 2.5}
               maxPolarAngle={Math.PI / 2.5}
             />

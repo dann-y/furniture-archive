@@ -17,6 +17,7 @@ const DetailCanvas = ({ url }) => {
           <OrbitControls
             autoRotate
             autoRotateSpeed={4}
+            enablePan={false}
             minDistance={0.5}
             maxDistance={1.5}
           />
