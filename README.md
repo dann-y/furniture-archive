@@ -1,5 +1,7 @@
 # Furniture Archive 2021
 
+Built using react and react three fiber.
+
 Scrapped due to lack of access to 3d models for many pieces of furniture.
 
 "The furniture archive is a digital installation highlighting prominent works of industrial designers throughout history, with an emphasis on mid-century modern design."
